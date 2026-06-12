@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 932" width="430" height="932">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="60%" r="70%">
+      <stop offset="0%" stop-color="#c8992a"/>
+      <stop offset="40%" stop-color="#8b6010"/>
+      <stop offset="100%" stop-color="#1a0f02"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <linearGradient id="pillar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7a5c10"/>
+      <stop offset="30%" stop-color="#d4a017"/>
+      <stop offset="70%" stop-color="#c8991a"/>
+      <stop offset="100%" stop-color="#6b5010"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8992a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3a2505"/>
+    </linearGradient>
+    <linearGradient id="topGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0802"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+    <linearGradient id="botGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#0a0804"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="430" height="932" fill="url(#bg)"/>
+
+  <!-- Soft center glow -->
+  <rect width="430" height="932" fill="url(#glow)" filter="url(#blur)"/>
+
+  <!-- Left pillar -->
+  <rect x="20" y="150" width="55" height="680" rx="8" fill="url(#pillar)" opacity="0.9"/>
+  <rect x="8" y="145" width="12" height="690" rx="4" fill="#d4a017" opacity="0.6"/>
+  <!-- Pillar ornament top -->
+  <ellipse cx="47" cy="155" rx="32" ry="20" fill="#d4a017" opacity="0.7"/>
+  <ellipse cx="47" cy="148" rx="24" ry="14" fill="#f2cc28" opacity="0.5"/>
+
+  <!-- Right pillar -->
+  <rect x="355" y="150" width="55" height="680" rx="8" fill="url(#pillar)" opacity="0.9"/>
+  <rect x="410" y="145" width="12" height="690" rx="4" fill="#d4a017" opacity="0.6"/>
+  <!-- Pillar ornament top -->
+  <ellipse cx="383" cy="155" rx="32" ry="20" fill="#d4a017" opacity="0.7"/>
+  <ellipse cx="383" cy="148" rx="24" ry="14" fill="#f2cc28" opacity="0.5"/>
+
+  <!-- Arch top -->
+  <path d="M75 200 Q215 80 355 200" stroke="#d4a017" stroke-width="8" fill="none" opacity="0.9"/>
+  <path d="M82 200 Q215 90 348 200" stroke="#f2cc28" stroke-width="3" fill="none" opacity="0.5"/>
+  <!-- Arch fill -->
+  <path d="M75 200 Q215 80 355 200 L355 150 Q215 30 75 150 Z" fill="rgba(212,160,23,0.15)"/>
+
+  <!-- Arch ornament -->
+  <circle cx="215" cy="100" r="18" fill="#d4a017" opacity="0.8"/>
+  <circle cx="215" cy="100" r="12" fill="#f7e060" opacity="0.6"/>
+  <circle cx="215" cy="100" r="5" fill="#fff" opacity="0.8"/>
+
+  <!-- Golden path / floor -->
+  <ellipse cx="215" cy="780" rx="200" ry="60" fill="url(#floor)" opacity="0.6"/>
+  <!-- Path lines (perspective) -->
+  <line x1="215" y1="400" x2="100" y2="850" stroke="#d4a017" stroke-width="1" opacity="0.25"/>
+  <line x1="215" y1="400" x2="330" y2="850" stroke="#d4a017" stroke-width="1" opacity="0.25"/>
+
+  <!-- Distant golden forest trees -->
+  <g opacity="0.5">
+    <ellipse cx="215" cy="380" rx="80" ry="100" fill="#2d5a1b" opacity="0.6"/>
+    <ellipse cx="160" cy="400" rx="55" ry="80" fill="#1e4010" opacity="0.5"/>
+    <ellipse cx="270" cy="400" rx="55" ry="80" fill="#1e4010" opacity="0.5"/>
+    <ellipse cx="120" cy="420" rx="40" ry="60" fill="#182f0d" opacity="0.4"/>
+    <ellipse cx="310" cy="420" rx="40" ry="60" fill="#182f0d" opacity="0.4"/>
+    <!-- Golden light through trees -->
+    <ellipse cx="215" cy="420" rx="50" ry="80" fill="#d4a017" opacity="0.12" filter="url(#blur)"/>
+  </g>
+
+  <!-- Golden lanterns (path sides) -->
+  <g fill="#d4a017" opacity="0.7">
+    <rect x="110" y="550" width="8" height="60" rx="2"/>
+    <rect x="106" y="545" width="16" height="10" rx="2"/>
+    <rect x="104" y="540" width="20" height="8" rx="2"/>
+    <ellipse cx="114" cy="538" rx="8" ry="4" fill="#f2cc28" opacity="0.8"/>
+
+    <rect x="312" y="550" width="8" height="60" rx="2"/>
+    <rect x="308" y="545" width="16" height="10" rx="2"/>
+    <rect x="306" y="540" width="20" height="8" rx="2"/>
+    <ellipse cx="316" cy="538" rx="8" ry="4" fill="#f2cc28" opacity="0.8"/>
+  </g>
+
+  <!-- COUPLE SILHOUETTES -->
+  <!-- Bride (left) - white saree with train -->
+  <g opacity="0.92">
+    <!-- Bride body -->
+    <ellipse cx="188" cy="680" rx="18" ry="28" fill="#f0ece0" opacity="0.9"/>
+    <!-- Bride head -->
+    <circle cx="188" cy="638" r="14" fill="#d4a8a0" opacity="0.85"/>
+    <!-- Flower in hair -->
+    <circle cx="180" cy="632" r="5" fill="white" opacity="0.9"/>
+    <circle cx="180" cy="632" r="3" fill="#fde8e8" opacity="0.8"/>
+    <!-- Saree long train -->
+    <path d="M188 700 Q175 780 150 870 Q160 875 172 870 Q190 780 196 706 Z" fill="#f5f0e8" opacity="0.85"/>
+    <!-- Saree detail lines -->
+    <path d="M186 710 Q172 780 148 865" stroke="#d4a017" stroke-width="0.8" fill="none" opacity="0.4"/>
+    <!-- Lace back detail -->
+    <path d="M182 640 Q172 660 175 700" stroke="rgba(212,160,23,0.4)" stroke-width="1.5" fill="none"/>
+    <!-- Hand reaching right -->
+    <path d="M196 680 Q210 675 224 672" stroke="#d4a8a0" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Groom (right) - Nilame outfit -->
+  <g opacity="0.92">
+    <!-- Groom body/jacket - dark with gold embroidery -->
+    <rect x="220" y="648" width="36" height="48" rx="4" fill="#2a1f5a" opacity="0.95"/>
+    <!-- Embroidery pattern -->
+    <rect x="224" y="652" width="28" height="44" rx="2" fill="none" stroke="#d4a017" stroke-width="1.5" opacity="0.6"/>
+    <line x1="238" y1="652" x2="238" y2="696" stroke="#d4a017" stroke-width="1" opacity="0.5"/>
+    <!-- Gold trim -->
+    <rect x="220" y="648" width="36" height="5" rx="2" fill="#d4a017" opacity="0.7"/>
+    <!-- Groom head -->
+    <circle cx="238" cy="634" r="14" fill="#c49a8a" opacity="0.85"/>
+    <!-- Traditional crown/hat -->
+    <path d="M224 632 Q238 610 252 632 L252 636 Q238 618 224 636 Z" fill="#d4a017" opacity="0.9"/>
+    <path d="M228 632 Q238 614 248 632" stroke="#f2cc28" stroke-width="2" fill="none" opacity="0.7"/>
+    <!-- Crown peak ornament -->
+    <circle cx="238" cy="612" r="5" fill="#f7e060" opacity="0.8"/>
+    <!-- Saree/skirt -->
+    <rect x="222" y="696" width="32" height="80" rx="3" fill="#f0ece0" opacity="0.8"/>
+    <!-- Saree stripes -->
+    <line x1="226" y1="696" x2="222" y2="776" stroke="#d4a017" stroke-width="1" opacity="0.4"/>
+    <line x1="234" y1="696" x2="230" y2="776" stroke="#d4a017" stroke-width="1" opacity="0.4"/>
+    <!-- Hand reaching left -->
+    <path d="M222 680 Q210 675 200 672" stroke="#c49a8a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating rose petals -->
+  <g opacity="0.7">
+    <ellipse cx="120" cy="300" rx="7" ry="5" fill="#ffb7c5" transform="rotate(-20 120 300)"/>
+    <ellipse cx="280" cy="250" rx="6" ry="4" fill="#ffb7c5" transform="rotate(15 280 250)"/>
+    <ellipse cx="180" cy="200" rx="5" ry="4" fill="#ffd4dc" transform="rotate(-35 180 200)"/>
+    <ellipse cx="340" cy="320" rx="7" ry="5" fill="#ffb7c5" transform="rotate(25 340 320)"/>
+    <ellipse cx="100" cy="450" rx="5" ry="4" fill="#ffd4dc" transform="rotate(-10 100 450)"/>
+    <ellipse cx="310" cy="180" rx="6" ry="4" fill="#ffe0e8" transform="rotate(40 310 180)"/>
+    <!-- Gold petals -->
+    <ellipse cx="200" cy="350" rx="6" ry="4" fill="#fde68a" transform="rotate(-15 200 350)"/>
+    <ellipse cx="260" cy="480" rx="5" ry="3" fill="#fde68a" transform="rotate(30 260 480)"/>
+  </g>
+
+  <!-- Flower garlands -->
+  <g opacity="0.45">
+    <path d="M75 300 Q100 290 125 305 Q150 320 175 308" stroke="#ffb7c5" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M255 308 Q280 320 305 305 Q330 290 355 300" stroke="#ffb7c5" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sinhala text overlay at top of arch -->
+  <text x="215" y="175" text-anchor="middle" font-family="serif" font-size="16" fill="#d4a017" opacity="0.85" letter-spacing="3">කසුන් සහ තරුෂි</text>
+
+  <!-- Top gradient overlay -->
+  <rect width="430" height="200" fill="url(#topGrad)"/>
+
+  <!-- Bottom gradient overlay -->
+  <rect y="700" width="430" height="232" fill="url(#botGrad)"/>
+
+  <!-- Side vignette -->
+  <rect width="60" height="932" fill="rgba(10,8,4,0.4)"/>
+  <rect x="370" width="60" height="932" fill="rgba(10,8,4,0.4)"/>
+</svg>
