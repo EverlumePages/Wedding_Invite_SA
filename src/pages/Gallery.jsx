@@ -1,17 +1,14 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import GoldenDivider from '../components/GoldenDivider'
-import heroImg from '../assets/hero.svg'
 
-// For gallery, we'll use the hero image in different crop positions to simulate different photos
-// The user can replace these with actual photos
 const galleryItems = [
-  { id: 1, src: heroImg, caption: 'රන් දොරටුව', tall: true },
-  { id: 2, src: heroImg, caption: 'ආදරය', tall: false },
-  { id: 3, src: heroImg, caption: 'සිරිත් විරිත්', tall: false },
-  { id: 4, src: heroImg, caption: 'රන් වනය', tall: true },
-  { id: 5, src: heroImg, caption: 'ජෝඩුව', tall: false },
-  { id: 6, src: heroImg, caption: 'ඉරිදා', tall: false },
+  { id: 1, src: '/4.jpg',  tall: true },
+  { id: 2, src: '/1.jpg',  tall: false },
+  { id: 3, src: '/2.jpg',  tall: false },
+  { id: 4, src: '/3.jpg',  tall: true },
+  { id: 5, src: '/5.jpg',  tall: false },
+  { id: 6, src: '/6.jpg',  tall: false },
 ]
 
 export default function Gallery() {

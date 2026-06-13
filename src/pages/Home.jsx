@@ -3,10 +3,7 @@ import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import PetalParticles from '../components/PetalParticles'
 import GoldenDivider from '../components/GoldenDivider'
-// Import hero image - if you have the actual PNG from AI generation, name it hero.png
-// Otherwise the SVG placeholder is used
-import heroImgSvg from '../assets/hero.svg'
-const heroImg = heroImgSvg
+const heroImg = '/wedding.jpg'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -40,13 +37,21 @@ export default function Home() {
             background: `
               linear-gradient(
                 to bottom,
-                rgba(10,8,4,0.65) 0%,
-                rgba(10,8,4,0.1) 25%,
-                rgba(10,8,4,0.05) 50%,
-                rgba(10,8,4,0.3) 75%,
-                rgba(10,8,4,0.92) 100%
+                rgba(10,8,4,0.72) 0%,
+                rgba(10,8,4,0.45) 25%,
+                rgba(10,8,4,0.40) 50%,
+                rgba(10,8,4,0.55) 75%,
+                rgba(10,8,4,0.95) 100%
               )
             `
+          }}
+        />
+
+        {/* Glass dark centre panel behind names */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse 80% 55% at 50% 42%, rgba(10,8,4,0.45) 0%, transparent 100%)'
           }}
         />
 
@@ -54,7 +59,7 @@ export default function Home() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at center, transparent 40%, rgba(5,3,1,0.5) 100%)'
+            background: 'radial-gradient(ellipse at center, transparent 35%, rgba(5,3,1,0.6) 100%)'
           }}
         />
       </div>
@@ -85,7 +90,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          සාදරයෙන් ඔබව ආරාධනා කරමු
+          සාදරයෙන් ඔබට ආරාධනා කරමු
         </motion.p>
 
         <motion.p

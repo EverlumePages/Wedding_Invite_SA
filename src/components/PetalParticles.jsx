@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-const PETAL_COUNT = 18
+const FLOWER_COUNT = 10
 
 function randomBetween(a, b) {
   return a + Math.random() * (b - a)
@@ -13,39 +13,33 @@ export default function PetalParticles() {
     const container = containerRef.current
     if (!container) return
 
-    const petals = []
+    const flowers = []
 
-    for (let i = 0; i < PETAL_COUNT; i++) {
-      const petal = document.createElement('div')
-      petal.className = 'petal'
+    for (let i = 0; i < FLOWER_COUNT; i++) {
+      const flower = document.createElement('div')
+      flower.className = 'petal'
+      flower.textContent = '❀'
 
-      const size = randomBetween(8, 20)
+      const size = randomBetween(14, 24)
       const left = randomBetween(0, 100)
-      const duration = randomBetween(6, 14)
-      const delay = randomBetween(0, 12)
-      const hue = randomBetween(340, 360)
-      const isGold = Math.random() > 0.6
+      const duration = randomBetween(8, 16)
+      const delay = randomBetween(0, 14)
+      const isPink = Math.random() > 0.5
 
-      petal.style.cssText = `
+      flower.style.cssText = `
         left: ${left}%;
-        width: ${size}px;
-        height: ${size * 0.8}px;
+        font-size: ${size}px;
+        line-height: 1;
+        color: ${isPink ? 'rgba(255,182,193,0.9)' : 'rgba(255,255,255,0.9)'};
+        text-shadow: 0 0 4px ${isPink ? 'rgba(255,182,193,0.5)' : 'rgba(255,255,255,0.5)'};
         animation-duration: ${duration}s;
         animation-delay: ${-delay}s;
-        background: ${isGold
-          ? `radial-gradient(ellipse, rgba(255,220,100,0.85), rgba(212,160,23,0.4))`
-          : `radial-gradient(ellipse, rgba(255,${Math.floor(randomBetween(150,200))},${Math.floor(randomBetween(180,220))},0.85), rgba(255,100,130,0.4))`
-        };
-        border-radius: ${randomBetween(40,70)}% ${randomBetween(30,60)}% ${randomBetween(50,70)}% ${randomBetween(30,60)}% / 
-                       ${randomBetween(40,70)}% ${randomBetween(30,60)}% ${randomBetween(50,70)}% ${randomBetween(30,60)}%;
-        transform-origin: ${randomBetween(40,60)}% ${randomBetween(40,60)}%;
-        filter: blur(${randomBetween(0, 0.5)}px);
       `
-      container.appendChild(petal)
-      petals.push(petal)
+      container.appendChild(flower)
+      flowers.push(flower)
     }
 
-    return () => { petals.forEach(p => p.remove()) }
+    return () => { flowers.forEach(f => f.remove()) }
   }, [])
 
   return (

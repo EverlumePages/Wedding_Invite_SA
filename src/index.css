@@ -27,6 +27,10 @@ html, body, #root {
   overflow-x: hidden;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: #0a0804;
   font-family: 'Noto Serif Sinhala', serif;
@@ -124,28 +128,27 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 15%;
   transform-origin: center;
+  filter: blur(4px);
   animation: kenBurns 20s ease-in-out infinite alternate;
 }
 
 @keyframes kenBurns {
-  0%   { transform: scale(1.0) translate(0%, 0%); }
-  25%  { transform: scale(1.06) translate(-0.5%, -0.5%); }
-  50%  { transform: scale(1.1) translate(0.5%, 0%); }
-  75%  { transform: scale(1.06) translate(-0.5%, 0.5%); }
-  100% { transform: scale(1.0) translate(0%, 0%); }
+  0%   { transform: scale(1.08) translate(0%, 0%); }
+  25%  { transform: scale(1.11) translate(-0.3%, -0.3%); }
+  50%  { transform: scale(1.13) translate(0.3%, 0%); }
+  75%  { transform: scale(1.11) translate(-0.3%, 0.3%); }
+  100% { transform: scale(1.08) translate(0%, 0%); }
 }
 
 /* ───── PETAL PARTICLES ───── */
 .petal {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  background: radial-gradient(ellipse, rgba(255, 183, 197, 0.9), rgba(255, 150, 170, 0.5));
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  top: 0;
   animation: petalFall linear infinite;
   pointer-events: none;
+  will-change: transform, opacity;
 }
 
 @keyframes petalFall {
@@ -193,11 +196,17 @@ body {
 .bottom-nav {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.bottom-nav-inner {
   width: 100%;
   max-width: 430px;
-  z-index: 100;
+  margin: 0 auto;
+  pointer-events: auto;
   background: rgba(10, 8, 4, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);

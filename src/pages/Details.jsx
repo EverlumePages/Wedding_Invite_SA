@@ -157,7 +157,7 @@ export default function Details() {
         </InfoCard>
 
         {/* Dress Code Card */}
-        <InfoCard id="card-dress" icon="👘" title="ඇඳුම් සංග්‍රහය">
+        <InfoCard id="card-dress" icon="👗" title="ඇඳුම්">
           <div className="text-center py-2">
             <p
               className="font-sinhala text-xl font-bold mb-2"

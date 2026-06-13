@@ -14,14 +14,14 @@ export default function NavBar() {
 
   return (
     <nav className="bottom-nav">
-      <div className="flex justify-around items-center px-2">
+      <div className="bottom-nav-inner flex items-start">
         {navItems.map(({ path, label, icon }) => {
           const active = location.pathname === path
           return (
             <button
               key={path}
               onClick={() => navigate(path)}
-              className={`flex flex-col items-center gap-1 px-3 py-1 rounded-xl transition-all duration-300 ${
+              className={`flex-1 min-w-0 flex flex-col items-center gap-1 px-0.5 py-1 rounded-xl transition-all duration-300 ${
                 active
                   ? 'text-yellow-400'
                   : 'text-amber-700/60'
@@ -34,7 +34,7 @@ export default function NavBar() {
                 {icon}
               </span>
               <span
-                className={`font-sinhala text-[10px] leading-none font-medium transition-all duration-300 ${
+                className={`font-sinhala text-[10px] leading-tight font-medium text-center transition-all duration-300 ${
                   active ? 'text-gold-gradient' : ''
                 }`}
                 style={active ? {

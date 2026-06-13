@@ -237,7 +237,7 @@ export default function RSVP() {
                 disabled={loading || !form.name || !form.attending}
                 style={{ opacity: loading || !form.name || !form.attending ? 0.6 : 1 }}
               >
-                {loading ? '⏳ ඉදිරිපත් කෙරේ...' : '✅ &nbsp;RSVP ඉදිරිපත් කරන්න'}
+                {loading ? '⏳ ඉදිරිපත් කෙරේ...' : 'RSVP ඉදිරිපත් කරන්න'}
               </button>
 
               <button
