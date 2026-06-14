@@ -37,7 +37,7 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       {showFlare && <FlareIntro onComplete={handleFlareComplete} />}
       <AppContent />
     </BrowserRouter>
